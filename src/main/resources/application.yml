@@ -1,17 +1,5 @@
-eureka:
-  client:
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-    # 是否向自己注册，因为本身就是服务端，所以不需要
-    register-with-eureka: false
-    fetch-registry: false
-  # eureka服务端的自我保护 开发环境可以关闭，线上环境开启
-  server:
-    enable-self-preservation: true
-  instance:
-    hostname: localhost
 spring:
+  profiles:
+    active: eureka1
   application:
     name: eureka
-server:
-  port: 8761
